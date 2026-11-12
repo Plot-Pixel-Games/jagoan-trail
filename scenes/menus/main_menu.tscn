@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://ce160r38un4g4"]
+
+[ext_resource type="FontFile" uid="uid://b6rokbtdny4pp" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="1_imvie"]
+[ext_resource type="Script" uid="uid://cphage7r34iwd" path="res://scripts/main_menu.gd" id="2_ng0o5"]
+[ext_resource type="Texture2D" uid="uid://g2reyelwsv7a" path="res://assets/images/main-menu-bg.jpeg" id="3_8r73w"]
+[ext_resource type="Texture2D" uid="uid://cj6q43p6ksyxv" path="res://assets/images/checkerboard.jpg" id="4_1hnlc"]
+[ext_resource type="Theme" uid="uid://3e77vouwtsk0" path="res://ui_theme.tres" id="5_50h1w"]
+
+[sub_resource type="Theme" id="Theme_dmjyp"]
+default_font = ExtResource("1_imvie")
+default_font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(1, 0.8745098, 0, 1)
+corner_detail = 20
+expand_margin_left = 24.0
+expand_margin_right = 24.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
+content_margin_left = 12.0
+
+[node name="MainMenu" type="Control" unique_id=229326639]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_dmjyp")
+script = ExtResource("2_ng0o5")
+
+[node name="Background" type="TextureRect" parent="." unique_id=264975889]
+modulate = Color(0.5783495, 0.57834953, 0.5783495, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -451.645
+offset_bottom = 108.35498
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8r73w")
+expand_mode = 4
+
+[node name="Frame" type="TextureRect" parent="." unique_id=321031968]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 100.0
+offset_right = 300.0
+offset_bottom = 300.00006
+grow_horizontal = 2
+texture = ExtResource("4_1hnlc")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="TitleLabel" type="Label" parent="Frame" unique_id=1064680336]
+layout_mode = 0
+offset_left = 23.5
+offset_top = 63.0
+offset_right = 576.5
+offset_bottom = 140.0
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = ExtResource("1_imvie")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
+text = "J a g o a n   T r a i l"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="MenuContainer" type="CenterContainer" parent="." unique_id=401516997]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.60300004
+anchor_right = 0.5
+anchor_bottom = 0.60300004
+offset_left = -276.5
+offset_top = -117.160034
+offset_right = 276.5
+offset_bottom = 117.839966
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer" unique_id=1438750670]
+layout_mode = 2
+theme_override_constants/separation = 11
+
+[node name="PlayButton" type="Button" parent="MenuContainer/VBoxContainer" unique_id=1435240903]
+layout_mode = 2
+theme = ExtResource("5_50h1w")
+theme_type_variation = &"FlatButton"
+text = "Main"
+
+[node name="SettingsButton" type="Button" parent="MenuContainer/VBoxContainer" unique_id=871613765]
+layout_mode = 2
+theme = ExtResource("5_50h1w")
+theme_type_variation = &"FlatButton"
+text = "Pengaturan"
+
+[node name="QuitButton" type="Button" parent="MenuContainer/VBoxContainer" unique_id=1290943447]
+layout_mode = 2
+theme = ExtResource("5_50h1w")
+theme_type_variation = &"FlatButton"
+text = "Keluar"
+
+[node name="Copyright" type="Label" parent="." unique_id=611654625]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 328.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.8745098, 0, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jix8l")
+text = "Created By. Plot Pixel Games"
+vertical_alignment = 1
+
+[connection signal="pressed" from="MenuContainer/VBoxContainer/PlayButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]

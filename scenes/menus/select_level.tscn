@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://5erc23yuikut"]
+
+[ext_resource type="Theme" uid="uid://3e77vouwtsk0" path="res://ui_theme.tres" id="1_6xr6w"]
+[ext_resource type="Texture2D" uid="uid://bnh6oo0ivf2te" path="res://assets/images/bg-texture.jpg" id="1_eiguw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6xr6w"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 24.0
+expand_margin_right = 24.0
+
+[node name="SelectLevel" type="Control" unique_id=809171734]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_6xr6w")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=126627208]
+modulate = Color(0.8217887, 0.82178867, 0.82178867, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_eiguw")
+stretch_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=148047456]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1409846998]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_6xr6w")
+theme_override_colors/font_color = Color(1, 0.8745098, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_6xr6w")
+text = "PILIH LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1937055627]
+layout_mode = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_right = 128
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer" unique_id=1200306549]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 32
+columns = 5
+
+[node name="1" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=715378438]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "1"
+
+[node name="2" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1813701096]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "2"
+
+[node name="3" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=957151192]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "3"
+
+[node name="4" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=624915837]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "4"
+
+[node name="5" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1795022672]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "5"
+
+[node name="6" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1998815063]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "6"
+
+[node name="7" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1477315611]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "7"
+
+[node name="8" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=2026054489]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "8"
+
+[node name="9" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=2018034125]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "9"
+
+[node name="10" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1099626687]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 48
+text = "10"
