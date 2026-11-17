@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cet4r8xudxic2"]
+
+[ext_resource type="Texture2D" uid="uid://cjr5qs3svrt4c" path="res://assets/Retro Motocross Pixel Art Tileset.png" id="1_6iamk"]
+[ext_resource type="PackedScene" uid="uid://bstp4sof3k480" path="res://scenes/player.tscn" id="1_ksju7"]
+
+[node name="Level1" type="Node2D" unique_id=1170463562]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=190751716]
+position = Vector2(342, -327)
+scale = Vector2(1.0256222, 1.0256222)
+texture = ExtResource("1_6iamk")
+
+[node name="Player" parent="." unique_id=557842310 instance=ExtResource("1_ksju7")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=335998738]
